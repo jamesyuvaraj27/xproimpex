@@ -1,0 +1,38 @@
+{
+  "name": "xproimpex",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc --noEmit && vite build && vite build --ssr src/entry-server.tsx --outDir dist-ssr && node scripts/prerender.mjs",
+    "preview": "vite preview",
+    "build:staging": "tsc --noEmit && vite build --mode staging && vite build --ssr src/entry-server.tsx --outDir dist-ssr --mode staging && node scripts/prerender.mjs",
+    "contrast": "node scripts/contrast.mjs",
+    "verify": "npm run typecheck && npm run contrast"
+  },
+  "dependencies": {
+    "@fontsource-variable/archivo": "^5.1.1",
+    "@fontsource-variable/source-serif-4": "^5.1.1",
+    "@radix-ui/react-accordion": "^1.2.3",
+    "@radix-ui/react-dialog": "^1.1.6",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.475.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^6.30.6",
+    "tailwind-merge": "^3.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.6",
+    "@types/node": "^26.4.1",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "@vitejs/plugin-react": "^4.3.4",
+    "tailwindcss": "^4.0.6",
+    "typescript": "^5.7.3",
+    "vite": "^6.1.0"
+  }
+}

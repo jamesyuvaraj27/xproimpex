@@ -1,0 +1,12 @@
+node_modules
+dist
+dist-ssr
+.env
+.env.*
+!.env.example
+.DS_Store
+*.local
+.vercel
+.preview*
+.ssr-*
+_to_delete
