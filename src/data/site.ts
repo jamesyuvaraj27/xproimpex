@@ -73,7 +73,7 @@ export const offices: Office[] = [
   {
     id: 'chennai',
     city: 'Chennai',
-    addressLines: ['9/1, Koil St, Choolaimedu'],
+    addressLines: ['96/93, Bajanai Koil Street, Choolaimedu'],
     locality: 'Chennai',
     region: 'Tamil Nadu',
     postalCode: '600094',
