@@ -2,12 +2,11 @@ import { Instagram, Linkedin } from 'lucide-react'
 import { social } from '@/data/site'
 import { cn } from '@/lib/cn'
 
-/** Icon-only social links — no handle text, no visible URL. */
 export function SocialLinks({ className }: { className?: string }) {
   return (
     <ul className={cn('flex items-center gap-3', className)}>
-      {social.instagram.href ? (
-        <li>
+      <li>
+        {social.instagram.href ? (
           <a
             href={social.instagram.href}
             target="_blank"
@@ -17,8 +16,16 @@ export function SocialLinks({ className }: { className?: string }) {
           >
             <Instagram width={18} height={18} strokeWidth={1.5} aria-hidden="true" />
           </a>
-        </li>
-      ) : null}
+        ) : (
+          <span
+            aria-label={social.instagram.label}
+            title={social.instagram.label}
+            className="inline-flex size-10 items-center justify-center rounded-full border border-paper-50/25 text-paper-50/80 transition-colors cursor-default"
+          >
+            <Instagram width={18} height={18} strokeWidth={1.5} aria-hidden="true" />
+          </span>
+        )}
+      </li>
       <li>
         <a
           href={social.linkedin.href}

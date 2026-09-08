@@ -54,9 +54,14 @@ export function Header() {
         <Link
           to="/"
           onClick={(e) => handleNavClick(e, '/')}
-          className="font-display text-[22px] font-bold lowercase tracking-tight text-brine-700 transition-colors hover:text-stamp-600"
+          className="flex items-center gap-2.5 font-display text-[22px] font-bold lowercase tracking-tight text-brine-700 transition-colors hover:text-stamp-600"
         >
-          {site.name}
+          <img
+            src="/logo.png"
+            alt={site.name}
+            className="h-9 w-auto object-contain"
+          />
+          <span>{site.name}</span>
         </Link>
 
         <nav aria-label="Primary" className="hidden lg:block">

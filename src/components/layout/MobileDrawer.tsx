@@ -16,8 +16,13 @@ export function MobileDrawer({
         <Dialog.Overlay className="fixed inset-0 z-50 bg-ink-900/40" />
         <Dialog.Content className="fixed inset-y-0 right-0 z-50 flex w-[86%] max-w-sm flex-col bg-paper-0 shadow-xl focus:outline-none">
           <div className="flex h-[var(--header-height)] items-center justify-between border-b border-rule-500 px-5">
-            <Dialog.Title className="font-display text-[20px] font-bold lowercase text-brine-700">
-              {site.name}
+            <Dialog.Title className="flex items-center gap-2 font-display text-[20px] font-bold lowercase text-brine-700">
+              <img
+                src="/logo.png"
+                alt={site.name}
+                className="h-7 w-auto object-contain"
+              />
+              <span>{site.name}</span>
             </Dialog.Title>
             <Dialog.Description className="sr-only">Site navigation</Dialog.Description>
             <Dialog.Close

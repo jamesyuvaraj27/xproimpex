@@ -20,9 +20,14 @@ export function Footer() {
           <div>
             <Link
               to="/"
-              className="font-display text-[24px] font-bold lowercase tracking-tight text-paper-0"
+              className="flex items-center gap-2.5 font-display text-[24px] font-bold lowercase tracking-tight text-paper-0"
             >
-              {site.name}
+              <img
+                src="/logo.png"
+                alt={site.name}
+                className="h-9 w-auto rounded bg-paper-0/10 p-0.5 object-contain"
+              />
+              <span>{site.name}</span>
             </Link>
             <p className="type-small mt-2 text-brine-100">{site.category}</p>
             <p className="type-small mt-4 text-brine-100">{site.hours}</p>

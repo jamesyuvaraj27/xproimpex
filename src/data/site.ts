@@ -37,13 +37,13 @@ export const email = {
 export const social = {
   instagram: {
     label: 'Instagram',
-    handle: 'nalinimanickkam_15',
+    handle: '',
     /**
-     * Derived mechanically from the client-supplied handle (standard Instagram
-     * profile URL pattern). Confirm with the client before treating this as final —
-     * flagged in `gaps` (GAP 14).
+     * Set your Instagram URL here when ready:
+     * e.g. href: 'https://www.instagram.com/your_account/'
+     * Currently set to null so the icon displays in footer without an active link.
      */
-    href: 'https://www.instagram.com/nalinimanickkam_15/' as string | null,
+    href: null as string | null,
   },
   linkedin: {
     label: 'LinkedIn',
